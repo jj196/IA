@@ -9,10 +9,9 @@ function reflex_agent(location, state){
 
 var numState = 0;
 function test(states){
-
-        console.log('states', states)
-       //var state = states[numState%4]
-       state = ["A","DIRTY","DIRTY"]
+    
+       console.log('states', states)
+       var state = states[numState%4]
        console.log('states', states)
        console.log('state',state)
        var location = state[0];		
