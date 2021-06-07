@@ -24,7 +24,7 @@ function test(states2){
     numState += 1;
     states2[numState%4] = states;
     console.log('statet d', states)
- setTimeout(function(){ test(states); }, 2000);
+ setTimeout(function(){ test(states2); }, 2000);
 }
 
 var states = [
