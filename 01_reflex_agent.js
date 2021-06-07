@@ -27,8 +27,10 @@ function test(states2){
     numState += 1;
     states2[pos] = states;
     console.log('statet d', states)
-    if(numState % 4 === 0 )
+    if(numState % 4 === 0 ){
         pos +=1;
+        document.getElementById("log").innerHTML+="<br>State: ".concat(pos).concat(states2[pos]);
+    }
  setTimeout(function(){ test(states2); }, 2000);
 }
 
