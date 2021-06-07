@@ -8,24 +8,22 @@ function reflex_agent(location, state){
 }
 
 var numState = 0;
-function test(states){
-      
-       console.log('states', states)
-       var state = states[numState%4]
-       console.log('states', states)
-       console.log('state',state)
-       var location = state[0];		
-       var state = state[0] == "A" ? state[1] : state[2];
-       var action_result = reflex_agent(location, state);
-       document.getElementById("log").innerHTML+="<br>Location: ".concat(location).concat(" | Action: ").concat(action_result);
-       if (action_result == "CLEAN"){
-         if (location == "A") state[1] = "CLEAN";
-          else if (location == "B") state[2] = "CLEAN";
-       }
-       else if (action_result == "RIGHT") state[0] = "B";
-       else if (action_result == "LEFT") state[0] = "A";		
-       states[numState%4] = state;
-       numState += 1;
+function test(states2){
+    var states = states2[numState%4]
+    console.log('statet a', states)
+    var location = states[0];		
+    var state = states[0] == "A" ? states[1] : states[2];
+    var action_result = reflex_agent(location, state);
+    document.getElementById("log").innerHTML+="<br>Location: ".concat(location).concat(" | Action: ").concat(action_result);
+    if (action_result == "CLEAN"){
+      if (location == "A") states[1] = "CLEAN";
+       else if (location == "B") states[2] = "CLEAN";
+    }
+    else if (action_result == "RIGHT") states[0] = "B";
+    else if (action_result == "LEFT") states[0] = "A";	
+    numState += 1;
+    states2[numState%4] = states;
+    console.log('statet d', states)
  setTimeout(function(){ test(states); }, 2000);
 }
 
