@@ -8,9 +8,12 @@ function reflex_agent(location, state){
 }
 
 var numState = 0;
+var pos = 0;
 function test(states2){
-    console.log('pos', numState%4)
-    var states = states2[numState%4]
+    if(numState % 4 === 0 )
+        pos +=1;
+    console.log('pos', pos)
+    var states = states2[pos]
     console.log('statet a', states)
     var location = states[0];		
     var state = states[0] == "A" ? states[1] : states[2];
