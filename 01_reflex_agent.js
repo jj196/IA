@@ -10,8 +10,7 @@ function reflex_agent(location, state){
 var numState = 0;
 var pos = 0;
 function test(states2){
-    if(numState % 4 === 0 )
-        pos +=1;
+   
     console.log('pos', pos)
     var states = states2[pos]
     console.log('statet a', states)
@@ -26,8 +25,10 @@ function test(states2){
     else if (action_result == "RIGHT") states[0] = "B";
     else if (action_result == "LEFT") states[0] = "A";	
     numState += 1;
-    states2[numState%4] = states;
+    states2[pos] = states;
     console.log('statet d', states)
+    if(numState % 4 === 0 )
+        pos +=1;
  setTimeout(function(){ test(states2); }, 2000);
 }
 
