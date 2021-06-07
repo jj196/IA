@@ -6,7 +6,7 @@ function reflex_agent(location, state){
     else if (location=="A") return "RIGHT";
     else if (location=="B") return "LEFT";
 }
-
+B,CLEAN,DIRTY
 var numState = 0;
 var pos = 0;
 function test(states2){
@@ -38,9 +38,9 @@ var states = [
     ["A","DIRTY","DIRTY"],
     ["B","DIRTY","DIRTY"],
     ["A","DIRTY","CLEAN"],
-    ["B","CLEAN","DIRTY"],
-    ["A","CLEAN","DIRTY"],
     ["B","DIRTY","CLEAN"],
+    ["A","CLEAN","DIRTY"],
+    ["B","CLEAN","DIRTY"],
     ["A","CLEAN","CLEAN"],
     ["B","CLEAN","CLEAN"]
 ]
