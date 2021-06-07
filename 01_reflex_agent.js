@@ -9,6 +9,7 @@ function reflex_agent(location, state){
 
 var numState = 0;
 function test(states2){
+    console.log('pos', numState%4)
     var states = states2[numState%4]
     console.log('statet a', states)
     var location = states[0];		
