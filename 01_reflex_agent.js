@@ -9,7 +9,9 @@ function reflex_agent(location, state){
 
 var numState = 0;
 function test(states){
-       var states = state[numState%4]
+       var state = state[numState%4]
+       console.log('states', states)
+       console.log('state',state)
        var location = state[0];		
        var state = state[0] == "A" ? state[1] : state[2];
        var action_result = reflex_agent(location, state);
@@ -33,5 +35,6 @@ var states = [
     ["B","DIRTY","CLEAN"],
     ["A","CLEAN","CLEAN"],
     ["B","CLEAN","CLEAN"]
-];
+]
+;
  test(states); 
