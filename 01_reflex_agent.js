@@ -6,14 +6,11 @@ function reflex_agent(location, state){
     else if (location=="A") return "RIGHT";
     else if (location=="B") return "LEFT";
 }
-B,CLEAN,DIRTY
+
 var numState = 0;
 var pos = 0;
 function test(states2){
-   
-    console.log('pos', pos)
     var states = states2[pos]
-    console.log('statet a', states)
     var location = states[0];		
     var state = states[0] == "A" ? states[1] : states[2];
     var action_result = reflex_agent(location, state);
@@ -26,10 +23,9 @@ function test(states2){
     else if (action_result == "LEFT") states[0] = "A";	
     numState += 1;
     states2[pos] = states;
-    console.log('statet d', states)
     if(numState % 4 === 0 ){
         pos +=1;
-        document.getElementById("log").innerHTML+="<br>State: ".concat(pos).concat(states2[pos]);
+        document.getElementById("log").innerHTML+="<br>State: ".concat(states2[pos]);
     }
  setTimeout(function(){ test(states2); }, 2000);
 }
