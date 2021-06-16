@@ -1,5 +1,3 @@
-/ MIT License
-// Copyright (c) 2021 Luis Espino
 
 function heuristic(start, end) {
 	var tiles_out = 0
