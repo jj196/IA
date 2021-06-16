@@ -45,7 +45,7 @@ function bestfirst(start, end, h){
 		list = list.concat(temp);
 		list = list.sort( function(a,b) { return a[1] - b[1] });
 		cont++
-		if (cont > 500) {
+		if (cont > 1000) {
 			alert("The search is looped!")
 			dot += '}'
 			return dot
